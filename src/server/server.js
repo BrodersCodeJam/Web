@@ -3,17 +3,41 @@ var express = require('express'),
     notification = require('./notification');
 
 
-//module.exports = function() {
+module.exports = (function() {
     try {
         var app = express();
 
         app.use(express.static('../'));
 
-        //receievem process approved attorneys congrats
+        var TITLE = "HomeLoan Status";
 
         app.get('/received', function(req, res) {
             console.log("RECEIVED");
-            notification.send('received');
+            notification.send(TITLE, 'received', '0');
+            res.end();
+        });
+
+        app.get('/processing', function(req, res) {
+            console.log("PROCESSING");
+            notification.send(TITLE, 'processing', '1');
+            res.end();
+        });
+
+        app.get('/approved', function(req, res) {
+            console.log("APPROVED");
+            notification.send(TITLE, 'approved', '2');
+            res.end();
+        });
+
+        app.get('/legal', function(req, res) {
+            console.log("LEGAL");
+            notification.send(TITLE, 'legal', '3');
+            res.end();
+        });
+
+        app.get('/complete', function(req, res) {
+            console.log("COMPLETE");
+            notification.send(TITLE, 'complete', '4');
             res.end();
         });
 
@@ -32,4 +56,4 @@ var express = require('express'),
     } catch (e) {
         console.log("Error starting server");
     }
-//};
+})();

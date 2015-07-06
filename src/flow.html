@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Woema Loans</title>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <script src="js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+</head>
+<body>
+<button>Received</button>
+<button>Processing</button>
+<button>Approved</button>
+<button>Legal</button>
+<button>Complete</button>
+
+</body>
+<script>
+    $("button").
+            on("click", function(e) {
+                $.get("/" + e.currentTarget.innerText, function( data ) {
+
+                });
+            });
+</script>
+</html>

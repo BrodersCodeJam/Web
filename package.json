@@ -1,0 +1,23 @@
+{
+  "name": "Web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test --reporter=spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrodersCodeJam/Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrodersCodeJam/Web/issues"
+  },
+  "homepage": "https://github.com/BrodersCodeJam/Web",
+  "devDependencies": {
+    "azure": "^0.10.6",
+    "express": "^4.13.1"
+  }
+}
